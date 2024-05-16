@@ -1,0 +1,36 @@
+<div class="mat-elevation-z2" style="width: 30%; padding: 30px; margin: 50px auto; display: flex; justify-content: center;">
+    <form [formGroup]="formSocio">
+        <div class="flex">
+            <mat-form-field>
+                <mat-label>Código</mat-label>
+                <input matInput formControlName="CardCode">
+            </mat-form-field>
+        </div>
+
+        <div class="flex">
+            <mat-form-field>
+                <mat-label>Nombre</mat-label>
+                <input matInput formControlName="CardName">
+            </mat-form-field>
+        </div>
+
+        <div class="flex">
+            <mat-form-field>
+                <mat-label>Cédula</mat-label>
+                <input matInput formControlName="Cedula">
+            </mat-form-field>
+        </div>
+
+        <div class="flex">
+            <mat-form-field>
+                <mat-label>FederalTaxID</mat-label>
+                <input matInput formControlName="FederalTaxID">
+            </mat-form-field>
+        </div>
+
+        <div class="flex">
+            <button mat-flat-button color="primary" (click)="guardar()">Guardar</button>
+            <button mat-flat-button color="warm" (click)="volver()" style="margin-left: 8px;">Volver</button>
+        </div>
+    </form>
+</div>
