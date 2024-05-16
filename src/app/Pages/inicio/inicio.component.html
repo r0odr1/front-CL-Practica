@@ -4,9 +4,11 @@
       <mat-card-title><p>Lista Socios</p></mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <button mat-flat-button color="primary">Obtener Socios</button>
-  
-      <table mat-table [dataSource]="listaSocios" class="mat-elevation-z2" style="margin-top: 20px;">
+      <input type="text" placeholder="Buscar socio..." (input)="onBuscarSocio($event)">
+
+      <!-- <button mat-flat-button color="primary"></button> -->
+ 
+      <table *ngIf="mostrarLista" mat-table [dataSource]="listaSocios" class="mat-elevation-z2" style="margin-top: 20px;">
   
           <!--- Note that these columns can be defined in any order.
                 The actual rendered columns are set as a property on the row definition" -->
