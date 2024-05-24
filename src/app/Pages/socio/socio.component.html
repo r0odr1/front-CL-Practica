@@ -3,7 +3,7 @@
         <div class="flex">
             <mat-form-field>
                 <mat-label>Código</mat-label>
-                <input matInput formControlName="CardCode">
+                <input class="input-locked" matInput formControlName="CardCode" readonly>
             </mat-form-field>
         </div>
 
@@ -17,7 +17,7 @@
         <div class="flex">
             <mat-form-field>
                 <mat-label>Cédula</mat-label>
-                <input matInput formControlName="Cedula">
+                <input class="cedula-locked" matInput formControlName="Cedula" readonly>
             </mat-form-field>
         </div>
 
@@ -33,4 +33,15 @@
             <button mat-flat-button color="warm" (click)="volver()" style="margin-left: 8px;">Volver</button>
         </div>
     </form>
+</div>
+
+<div style="width: 100%;">
+    <cl-table
+        [Id]="tableId"
+        [MappedColumns]="tableMappedColumns"
+        [Records]="records"
+        [RecordsCount]="records.length"
+        [ShouldPaginateRequest]="false"
+        [Buttons]="buttons"   
+    ></cl-table>
 </div>

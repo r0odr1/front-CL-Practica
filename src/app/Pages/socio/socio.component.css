@@ -1,0 +1,4 @@
+.input-locked,
+.cedula-locked {
+    cursor: not-allowed;
+}

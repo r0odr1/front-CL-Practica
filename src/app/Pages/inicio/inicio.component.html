@@ -4,7 +4,12 @@
       <mat-card-title><p>Lista Socios</p></mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <input type="text" placeholder="Buscar socio..." (input)="onBuscarSocio($event)">
+      <input type="text" placeholder="Buscar socio..." matInput [matAutocomplete]="auto" (input)="onBuscarSocio($event)">
+      <mat-autocomplete #auto="matAutocomplete" [displayWith]="displaySocio" (optionSelected)="editar($event.option.value)">
+        <mat-option *ngFor="let socio of listaSocios" [value]="socio">
+          {{ socio.CardCode }} - {{ socio.CardName }}
+        </mat-option>
+      </mat-autocomplete>
 
       <!-- <button mat-flat-button color="primary"></button> -->
  

@@ -1,0 +1,56 @@
+<div class="mat-elevation-z2" style="width: 30%; padding: 30px; margin: 50px auto; display: flex; justify-content: center;">
+  <form [formGroup]="direccionForm">
+    <div class="flex">
+      <mat-form-field>
+        <mat-label>Nombre</mat-label>
+        <input matInput formControlName="Name">
+      </mat-form-field>
+    </div>
+    <div class="flex">
+      <mat-form-field>
+        <mat-label>País</mat-label>
+        <input matInput formControlName="Country">
+      </mat-form-field>
+    </div>
+    <div class="flex">
+      <mat-form-field>
+        <mat-label>Provincia</mat-label>
+        <input matInput formControlName="Province">
+      </mat-form-field>
+    </div>
+    <div class="flex">
+      <mat-form-field>
+        <mat-label>Cantón</mat-label>
+        <input matInput formControlName="Canton">
+      </mat-form-field>
+    </div>
+    <div class="flex">
+      <mat-form-field>
+        <mat-label>Distrito</mat-label>
+        <input matInput formControlName="District">
+      </mat-form-field>
+    </div>
+    <div class="flex">
+      <mat-form-field>
+        <mat-label>Dirección</mat-label>
+        <input matInput formControlName="Address">
+      </mat-form-field>
+    </div>
+    <div class="flex">
+      <mat-form-field>
+        <mat-label>Tipo de Dirección</mat-label>
+        <input matInput formControlName="AddressType">
+      </mat-form-field>
+    </div>
+    <div class="flex">
+      <mat-form-field>
+        <mat-label>Es Predeterminada</mat-label>
+        <input matInput formControlName="IsDefault">
+      </mat-form-field>
+    </div>
+    <div class="flex">
+      <button mat-flat-button color="primary" (click)="guardar()">Guardar</button>
+      <button mat-flat-button color="warn" (click)="volver()" style="margin-left: 8px;">Volver</button>
+    </div>
+  </form>
+</div>
